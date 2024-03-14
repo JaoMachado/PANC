@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 //Assinaturas dos Metodos
 int receberIndiceArray(int array[], int n);
