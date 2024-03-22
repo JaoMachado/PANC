@@ -7,7 +7,6 @@ void geraArrayInteiros(int arrayA[], int n);
 void imprimeArray(int arrayA[], int n, char msg[]);
 void mergeSortIterativo(int arrayA[], int n);
 void intercalaSemSentinela(int arrayA[], int inicio, int meio, int fim);
-void intercalaComSentinela(int arrayA[], int inicio, int meio, int fim);
 void copiaArray(int arrayA[], int arrayB[], int n);
 
 int main()
