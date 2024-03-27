@@ -118,6 +118,7 @@ void copiaArray(int arrayA[], int arrayB[], int n) {
         arrayB[i] = arrayA[i];
     }
 }
+
 /* BuscaBinariaRecursiva(): metodo para achar o valor no array utilizando a recursividade*/
 void BuscaBinariaRecursiva(int arrayA[], int inicio, int fim, int x){
     // Verifica se o início é menor ou igual ao fim
@@ -133,6 +134,7 @@ void BuscaBinariaRecursiva(int arrayA[], int inicio, int fim, int x){
         // Se o elemento está na metade esquerda do array
         if (arrayA[meio] > x)
             BuscaBinariaRecursiva(arrayA, inicio, meio - 1, x);
+
         // Se o elemento está na metade direita do array
         else
             BuscaBinariaRecursiva(arrayA, meio + 1, fim, x);
