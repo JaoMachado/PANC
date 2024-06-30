@@ -56,10 +56,13 @@ void treeSumMelhorado(int A[], int n) {
             }
         }
     }
+
+    // imprime o valor total de triplas encontradas
+    printf("Total Triplas Encontradas pelo 3SUM Melhorado: %d\n", contTriplas);
 }
 
 /* BuscaBinaria(): metodo para achar o valor no array utilizando a recursividade
-    com complexidade T(n) ∊ O(n²)*/
+    com complexidade T(n) ∊ O(lgn)*/
 int BuscaBinaria (int x, int A[], int inicio, int fim) {
     // Verifica se o início é menor ou igual ao fim
     if (inicio <= fim) {
