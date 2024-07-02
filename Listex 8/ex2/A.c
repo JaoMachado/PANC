@@ -2,10 +2,8 @@
 #include <stdlib.h>
 
 // Declaracao das funcoes
-void addMatrices(int A[2][2], int B[2][2], int result[2][2]);
-void subtractMatrices(int A[2][2], int B[2][2], int result[2][2]);
-void strassenMultiplication(int A[2][2], int B[2][2], int C[2][2]);
-void printMatrix(int M[2][2]);
+void strassen(int A[2][2], int B[2][2], int C[2][2]);
+void imprimirMatriz(int M[2][2]);
 
 int main() {
     // arrays para armazenar as matrizes
@@ -14,35 +12,18 @@ int main() {
     int C[2][2]; 
 
     // Multiplicação das matrizes A e B usando o algoritmo de Strassen
-    strassenMultiplication(A, B, C);
+    strassen(A, B, C);
 
     // Impressão da matriz resultante
     printf("Matriz resultante C:\n");
-    printMatrix(C);
+    imprimirMatriz(C);
 
     return 0;
 }
 
-// Função para adicionar duas matrizes 2x2
-void addMatrices(int A[2][2], int B[2][2], int result[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            result[i][j] = A[i][j] + B[i][j]; // Soma dos elementos correspondentes
-        }
-    }
-}
-
-// Função para subtrair duas matrizes 2x2
-void subtractMatrices(int A[2][2], int B[2][2], int result[2][2]) {
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            result[i][j] = A[i][j] - B[i][j]; // Subtração dos elementos correspondentes
-        }
-    }
-}
-
-// Função para multiplicação de matrizes de Strassen para matrizes 2x2
-void strassenMultiplication(int A[2][2], int B[2][2], int C[2][2]) {
+/*strassen(): Função para multiplicação de matrizes de Strassen para matrizes 2x2,
+    com complexidade T(n) = O(n^2.807)*/ 
+void strassen(int A[2][2], int B[2][2], int C[2][2]) {
     // Variáveis para armazenar os produtos intermediários M1 a M7
     int M1, M2, M3, M4, M5, M6, M7;
 
@@ -72,8 +53,8 @@ void strassenMultiplication(int A[2][2], int B[2][2], int C[2][2]) {
     C[1][1] = M1 - M2 + M3 + M6; // Elemento C22
 }
 
-// Função para imprimir uma matriz 2x2
-void printMatrix(int M[2][2]) {
+// imprimirMatriz(): Função para imprimir uma matriz 2x2, complexidade T(n) = O(n²)
+void imprimirMatriz(int M[2][2]) {
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             printf("%d ", M[i][j]); // Imprime cada elemento da matriz
