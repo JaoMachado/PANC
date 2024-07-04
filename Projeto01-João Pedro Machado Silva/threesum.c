@@ -34,7 +34,7 @@ void treeSumForcaBruta(int A[], int n) {
 }
 
 /* treeSumMelhorado(): Calcula e apresenta as triplas encontradas no array, tal que (a+b+c = 0),
-    com complexidade T(n) ∊ O(n²)*/
+    com complexidade T(n) ∊ O(n².lgn)*/
 void treeSumMelhorado(int A[], int n) {
     // variável para contar a quantidade de triplas encontradas
     int contTriplas = 0;
